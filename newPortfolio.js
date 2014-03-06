@@ -28,7 +28,7 @@ $(document).ready(function () {
 });
 
 function doThis() {
-    
+
 }
 
 var count = 0;

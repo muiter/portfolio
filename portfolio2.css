@@ -1,0 +1,215 @@
+@font-face {
+    font-family: Rounded;
+    src: url('./examples/fonts/Acrom_Light.otf');
+}
+
+/*@media (min-width: 1200px) {*/
+    html {
+        /*background: url('./portfolio/photos/bulb.png') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        */
+    }
+
+    body {
+        font-family: Rounded, Helvetica;
+        width:100%;
+        background-color: #F9F9F9;
+    }
+
+    #pages {
+        width:20%;
+        float:left;
+        position: fixed;
+        height:100%;
+        text-align: center;
+    }
+
+    #showcasing, #connection, #me, #resumeView {
+        float:right;
+        width:80%;
+    }
+
+    iframe {
+        width:100%;
+        height:1100px;
+        background-color: #F9F9F9;
+    }
+
+    #me {
+        margin-top: 5em;
+    }
+
+    #me > p {
+        width: 70%;
+        margin: auto;
+        color:#D9593D;
+        font-size: 1.4em;
+        line-height: 1.4em;
+        margin-bottom: 1em;
+    }
+
+    #first {
+        float:left;
+        font-size: 3em;
+        color:#0597F2;
+        font-family: Rounded;
+        text-align: center;
+        width:100%;
+    }
+
+    #last {
+        float:left;
+        clear:both;
+        font-size: 3em;
+        margin-bottom: 4em;
+        color:#0597F2;
+        font-family: Rounded;
+        line-height: .7;
+        text-align: center;
+        width:100%; 
+    }
+
+    a {
+        color:#D9593D;
+        text-decoration: none;
+    }
+
+    #connection> p > a {
+        padding-top: .3em;
+        font-size: 1.4em;
+    }
+
+    a:hover {
+        color: #FF6948;
+        text-decoration: none;
+    }
+
+    #pages > p {
+        clear: both;
+        font-size: 1.6em;
+        margin-bottom: 1.3em;
+        color:#00B598;
+        font-family: Rounded;
+    }
+
+    #about {
+        margin-top: 4em;
+    }
+
+    #work:hover, #about:hover, #contact:hover, #resume:hover {
+        cursor: pointer;
+    }
+
+    #firstDescription {
+        background: url('./examples/photos/wordPlace.png') no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height:45em;
+        margin-bottom: .5em;
+    }
+
+    #secondDescription {
+        background: url('./examples/photos/quotes.png') no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height:45em;
+        margin-bottom: .5em;
+    }
+
+    #thirdDescription {
+        background: url('./examples/photos/bakery.png') no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height:45em;
+    }
+
+    #firstDescription > p {
+        width:50%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        color:white;
+        position: absolute;
+    }
+
+    #secondDescription > p {
+        width:50%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        color:white;
+        position: absolute;
+    }
+
+    #thirdDescription > p {
+        width:50%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        color:white;
+        position: absolute;
+    }
+
+    .paraOne {
+        margin-top: 13em;
+        margin-left: 8em;
+        padding: 3em;
+        line-height: 1.4em;
+        font-size: 1.2em;
+    }
+
+    #connection {
+        margin-top: 14em;
+    }
+
+    #me {
+        margin-top: 10em;
+    }
+
+    #connection > p {
+        margin: auto;
+        width: 50%;
+        text-align: center;
+        margin-bottom: 2em;
+        font-size: 1.3em;
+    }
+
+    #one, #two {
+        width:100%;
+    }
+
+    .currentWindow {
+        color:#0597F2;
+        font-weight: bold;
+    }
+
+    .show {
+        top:0;
+    }
+
+    .hide {
+        display: none;
+        top:0;
+    }
+/*}*/
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    
+}

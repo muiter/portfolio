@@ -1,215 +1,418 @@
 @font-face {
-    font-family: Rounded;
-    src: url('./examples/fonts/Acrom_Light.otf');
+    font-family: Hero_Light;
+    src: url('../fonts/Hero_Light.otf');
 }
 
-/*@media (min-width: 1200px) {*/
-    html {
-        /*background: url('./portfolio/photos/bulb.png') no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        */
+@font-face {
+    font-family: Acrom_Light;
+    src: url('../fonts/Acrom_Light.otf');
+}
+
+@font-face {
+    font-family: Acrom;
+    src: url('../fonts/Acrom.otf');
+}
+
+@font-face {
+    font-family: Ramp;
+    src: url('../fonts/Onramp.ttf');
+}
+
+@font-face {
+    font-family: RBNo2Light;
+    src: url('../fonts/RBNo2Light.otf');
+}
+
+body {
+    font-family: Klinic, Helvetica;
+    padding-top: 4em;
+}
+
+.container {
+    width: 100%;
+    padding: 0;
+}
+
+#about {
+    font-family: Ramp;
+    border-top: 4px solid white;
+    color:#6B6B6B;
+}
+
+#projects {
+    font-family: Ramp;
+    border-top: 4px solid white;
+    color:#6B6B6B;    
+}
+
+#resume {
+    font-family: Ramp;
+    border-top: 4px solid white;
+    color:#6B6B6B;
+}
+
+#contact {
+    font-family: Ramp;
+    border-top: 4px solid white;
+    color:#6B6B6B;
+}
+
+#myNavBar {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+#firstName {
+    color:#86A677;
+    font-family: Ramp;
+    margin-right: .1em;
+}
+
+#lastName {
+    color:#86A677;
+    font-family: Ramp;
+}
+
+#firstName, #lastName {
+    font-size: 2.2em;
+}
+
+.navbar-header {
+    margin-bottom: 1em;
+}
+
+.navbar-brand {
+    padding-top: .8em;
+}
+
+.navbar-default {
+    border: none;
+}
+
+.navbar-collapse {
+    border: none;
+    text-align: right;
+}
+
+.navbar-collapse.in {
+    overflow-y: visible;
+}
+
+.navbar {
+    -webkit-box-shadow: 0px 6px 95px -10px rgba(231,232,233,1);
+    -moz-box-shadow: 0px 6px 95px -10px rgba(231,232,233,1);
+    box-shadow: 0px 6px 95px -10px rgba(231,232,233,1);
+    border-radius: 0;
+}
+
+.navbar-nav {
+    margin-right: 1em;
+}
+
+#aboutPage {
+    width:55%;
+    margin-top: 8em;
+    font-size: 1.20em;
+    margin-left: auto;
+    margin-right: auto;
+    color:#6B6B6B;
+}
+
+.underline {
+    cursor: pointer;
+    width: 5.667em;
+    height: 4px;
+    margin-top: .6em;
+    margin-right: .5em;
+    margin-left: .5em;
+    font-size: 1.6em;
+}
+
+.underline #aboutSpan {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: #B2929D;
+    transition: all 0.5s;
+}
+
+.underline #projectSpan {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: #8CBEB2;
+    transition: all 0.5s;
+}
+
+.underline #resumeSpan {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: #F3B562;
+    transition: all 0.5s;
+}
+
+.underline #contactSpan {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: #F06060;
+    transition: all 0.5s;
+}
+
+.underline:hover #aboutSpan, .underline:hover #projectSpan, .underline:hover #resumeSpan, .underline:hover #contactSpan {
+    width: 100%;
+}
+
+#firstDescription {
+    background: url('../photos/wordPlace2.jpg') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 40em;
+        width:50%;
+    margin: 1em;
+    padding: 4em;
+    float:right;
+    display: inline-block;
+}
+
+#secondDescription {
+    background: url('../photos/quotes.png') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 40em;
+    width:50%;
+    margin: 1.3em;
+    padding: 4em;
+    float:right;
+    display: inline-block;
+}
+
+#thirdDescription {
+    background: url('../photos/bakery.png') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 40em;
+    width:50%;
+    margin: 1.3em;
+    padding: 4em;
+    float:right;
+    display: inline-block;
+}
+
+.paraOne {
+    padding: 2.2em;
+    font-size: 1.4em;
+    width: 40%;
+    height:100%;
+    float:left;
+    background-color: rgba(0, 0, 0, 0.84);
+    color:white;
+    padding: 1.8em;
+    color: white;
+}
+
+.projectLinks {
+    display: block;
+    text-align: center;
+}
+
+.hideThis {
+    display: none;
+}
+
+.showThis {
+    display: block;
+}
+
+#contactPage {
+    width: 45%;
+    margin-top: 8em;
+    font-size: 1.4em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#resumePage > img {
+    width:65%;
+    height:100%;
+    display: block;
+    margin: auto;
+    padding-top: 1em;
+}
+
+#contactPage > a {
+    display: block;
+    text-decoration: none;
+    border: 1px solid black;
+    margin-bottom: 2em;
+    padding: .3em;
+    width:40%;
+}
+
+#contactPage > a > img {
+    height: 40px;
+    display: inline;
+}
+
+#contactPage > a > p {
+    display: inline;
+    margin-top: .4em;
+    float: right;
+    margin-right: 1.8em;
+}
+
+@media (min-width : 768px) and (max-width : 1024px) {
+
+    #firstName, #lastName {
+        font-size: 1.7em;
     }
+
+    .navbar-brand {
+        padding-left: .2em;
+    }
+
+    #resumePage > img {
+        height: 100%;
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .underline {
+        font-size: 1.4em;
+    }
+
+}
+
+
+@media (max-width: 767px) {
 
     body {
-        font-family: Rounded, Helvetica;
-        width:100%;
-        background-color: #F9F9F9;
+        padding-top: 3em;
+        font-family: Acrom, Helvetica;
     }
 
-    #pages {
-        width:20%;
-        float:left;
-        position: fixed;
-        height:100%;
-        text-align: center;
+    li {
+        margin-left: 2em;
     }
 
-    #showcasing, #connection, #me, #resumeView {
-        float:right;
-        width:80%;
+    #aboutPage {
+        margin-top: 1.5em; 
+        font-size: 1.2em;
+        width:85%;
     }
 
-    iframe {
-        width:100%;
-        height:1100px;
-        background-color: #F9F9F9;
+    #firstName {
+        margin-right: 0.2em;
+        margin-left: .3em;
+        font-size: 2em;
+        font-family: Ramp;
+    }
+    
+    #lastName {
+        font-size: 2em;
+        font-family: Ramp;
     }
 
-    #me {
-        margin-top: 5em;
-    }
-
-    #me > p {
-        width: 70%;
-        margin: auto;
-        color:#D9593D;
-        font-size: 1.4em;
-        line-height: 1.4em;
-        margin-bottom: 1em;
-    }
-
-    #first {
-        float:left;
-        font-size: 3em;
-        color:#0597F2;
-        font-family: Rounded;
-        text-align: center;
+    ul {
         width:100%;
     }
 
-    #last {
-        float:left;
-        clear:both;
-        font-size: 3em;
-        margin-bottom: 4em;
-        color:#0597F2;
-        font-family: Rounded;
-        line-height: .7;
-        text-align: center;
-        width:100%; 
+    li {
+        float: left;
+        margin:0;
+        display: inline-block;
     }
 
-    a {
-        color:#D9593D;
-        text-decoration: none;
-    }
-
-    #connection> p > a {
-        padding-top: .3em;
+    #menuButton {
+        padding: 0;
+        background-color: white;
+        border: none;
         font-size: 1.4em;
     }
 
-    a:hover {
-        color: #FF6948;
-        text-decoration: none;
+    .navbar {
+        /*height: 4em;*/
     }
 
-    #pages > p {
-        clear: both;
-        font-size: 1.6em;
-        margin-bottom: 1.3em;
-        color:#00B598;
-        font-family: Rounded;
+    .navbar-brand {
+        padding-left: 0;
     }
 
-    #about {
-        margin-top: 4em;
+    .navbar-nav {
+        margin:0;
     }
 
-    #work:hover, #about:hover, #contact:hover, #resume:hover {
-        cursor: pointer;
+    .navbar-header {
+        margin-bottom: 0;
     }
 
-    #firstDescription {
-        background: url('./examples/photos/wordPlace.png') no-repeat center center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        height:45em;
-        margin-bottom: .5em;
+    .navbar-toggle {
+        border-radius: 1px;
     }
 
-    #secondDescription {
-        background: url('./examples/photos/quotes.png') no-repeat center center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        height:45em;
-        margin-bottom: .5em;
-    }
-
-    #thirdDescription {
-        background: url('./examples/photos/bakery.png') no-repeat center center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        height:45em;
-    }
-
-    #firstDescription > p {
-        width:50%;
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.8);
-        color:white;
-        position: absolute;
-    }
-
-    #secondDescription > p {
-        width:50%;
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.8);
-        color:white;
-        position: absolute;
-    }
-
-    #thirdDescription > p {
-        width:50%;
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.8);
-        color:white;
-        position: absolute;
+    #navCollapse {
+        width:100%;
+        padding: 0;
     }
 
     .paraOne {
-        margin-top: 13em;
-        margin-left: 8em;
-        padding: 3em;
-        line-height: 1.4em;
-        font-size: 1.2em;
+        font-size: .9em;
+        padding: 3.5em;
     }
 
-    #connection {
-        margin-top: 14em;
+    #firstDescription {
+        padding: 1.5em;
+        height: 22em;
+        margin: 1em;
     }
 
-    #me {
-        margin-top: 10em;
+    #secondDescription {
+        padding: 1.5em;
+        height: 22em;
+        margin: 1em;
+    }
+    
+    #thirdDescription {
+        padding: 1.5em;
+        height: 22em;
+        margin: 1em;
     }
 
-    #connection > p {
-        margin: auto;
-        width: 50%;
-        text-align: center;
-        margin-bottom: 2em;
+    #resumePage > img {
+        height: 100%;
+        width: 100%;
+        padding-top: 0;
+    }
+
+    #contactPage {
+        margin-top: 4em;
+    }
+
+    #contact, #projects, #resume, #about {
+        margin: 0;
+        margin-left: 2%;
+    }
+
+    .underline {
+        width: 22.5%;
+        height: 0;
         font-size: 1.3em;
     }
 
-    #one, #two {
-        width:100%;
-    }
-
-    .currentWindow {
-        color:#0597F2;
-        font-weight: bold;
-    }
-
-    .show {
-        top:0;
-    }
-
-    .hide {
-        display: none;
-        top:0;
-    }
-/*}*/
-
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {
-
-}
-
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
-
-}
-
-/* Landscape phones and down */
-@media (max-width: 480px) {
-    
 }
