@@ -13,7 +13,7 @@ $(document).ready(function () {
     }, viola);
     $("#work, #about, #contact, #resume").click(navColours);
 });
-    
+
 function viola(event) {
     var page = event.data.param;
     if (!$("#" + page).hasClass("show")) {
