@@ -14,6 +14,8 @@
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="css/resume.min.css" rel="stylesheet">
+  <!-- lightgallery css -->
+  <link type="text/css" rel="stylesheet" href="vendor/lightgallery/lightgallery.css" /> 
 </head>
 
 <body id="page-top">
@@ -37,10 +39,10 @@
           <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+          <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
         </li>
       </ul>
     </div>
@@ -51,8 +53,8 @@
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
       <div class="w-100">
         <h1 class="mb-0 text-primary">Matthew Muiter</h1>
-        <div class="lead mb-5">I'm an experienced front-end developer who creates standards with designers and engineers by building design systems.<div>
-        <p>I also sing while riding my bicycle, recently fell in love with Laugencroissants, and could eat Shakshouka everyday.</p>
+        <div class="lead mb-5">I'm an experienced front-end developer who creates standards with designers and engineers by building design systems.</div>
+        <div class="lead mb-5">I sing while riding my bicycle. I recently fell in love with Laugencroissants. I could also eat <a class="fun-link" href="https://en.wikipedia.org/wiki/Shakshouka" target="_blank" rel="noopener noreferrer">Shakshouka</a> everyday.</div>
         <div class="social-icons">
           <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/muiter/">
             <i class="fab fa-linkedin-in"></i>
@@ -84,7 +86,7 @@
           <div class="resume-content">
             <h3 class="mb-0">Design Engineer</h3>
             <div class="subheading mb-3">Copper</div>
-            <p>Starting at Copper, I immediately jumped into a rebranding project. The company was changing its name, logo, and product colors. I, and 1 other person, helped lead the developemnt efforts to change all of the old instances of the company name and logo. After this, I created a color variable system for a more cohesive color pallet. Starting with over 60 colors, I reduced it down to 25.</p>
+            <p>Starting at Copper, I immediately jumped into a rebranding project. The company was changing its name, logo, and product colors. I, and 1 other person, helped lead the developemnt efforts to change all of the old instances of the company name and logo. After this, I created a color variable system for a more cohesive color palette. Starting with over 60 colors, I reduced it down to 25.</p>
             <p>Tools: Ember, Babel, SASS, Webpack, NPM publishing, Mocha, Commitzen, Sketch, Figma</p>
           </div>
           <div class="resume-date text-md-right">
@@ -96,7 +98,7 @@
           <div class="resume-content">
             <h3 class="mb-0">Front-End Engineer</h3>
             <div class="subheading mb-3">SurveyMonkey</div>
-            <p>My first project at SurveyMonkey was to work with the design team and all web teams to create a npm styling library for the product rebranding. This was done by adding new classNames, color variables, and accessing html structures, attributes, and clever matching patterns to target current code. After this, I started a design system with React components and helped teams integrate it into their stack.</p>
+            <p>My first project at SurveyMonkey was to work with the design team and the core engineering teams to create a npm styling library for the product rebranding. This was done by adding new classNames, color variables, and accessing html structures, attributes, and clever matching patterns to target current code. After this, I created a design system with React components and helped teams integrate it into their stack.</p>
             <p>Tools: React, Babel, SASS, Webpack, Jest, Enzyme, NPM publishing, Commitzen, Sketch</p>
           </div>
           <div class="resume-date text-md-right">
@@ -144,6 +146,113 @@
 
     </section>
 
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="projects">
+      <div class="w-100">
+        <h2 class="mb-3 underline inline-block">Projects</h2>
+
+
+        <div class="resume-item mb-5">
+          <div class="project-content">
+            <h3 id="CopperDesignSystem" class="pt-4 mb-2"><a href="#CopperDesignSystem">Copper Design System</a></h3>
+          </div>
+          <div class="mb-3 task"><span class="black-text font-weight-bold">Task:</span> Update the colors in our product with the new color palette.</div>
+          <div class="mb-3 problem"><span class="black-text font-weight-bold">Problem:</span> Colors in our codebase are outdated, incoherent, and inconsistently defined.</div>
+          <div class="mb-3 solution"><span class="black-text font-weight-bold">Solution:</span> Consolidate and organize the current colors to allow changing of the values for the new colors.</div>
+          <div>Situation: There's multiple files of color variables. Some values of those variables are identical. Same are almost identical in saturation and hue. Some color variables are not used at all. Yikes.</div>
+          <div>
+            <div>
+              <!-- <img id="image" src="img/muiter.jpeg" alt="Picture"> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-item mb-5">
+          <div class="project-content">
+            <h3 id="CopperRebrand" class="pt-4 mb-2"><a href="#CopperRebrand">Copper Proudct Rebrand</a></h3>
+          </div>
+          <div class="mb-3 task"><span class="black-text font-weight-bold">Task:</span> Update the colors in our product with our new color palette.</div>
+          <div class="mb-3 problem"><span class="black-text font-weight-bold">Issue(s):</span> Colors in our codebase are outdated and inconsistently defined/used.</div>
+          <div class="mb-3 solution"><span class="black-text font-weight-bold">Solution:</span> Consolidate and organize the current colors to easily allow changing of the values for the new colors.</div>
+          <div class="mb-3 situation"><span class="black-text font-weight-bold">More Context:</span> There's multiple files of color variables. Some values of those variables are identical. Same are almost identical in saturation and hue. Some color variables are not used at all. Consolidating all variables into one color file is needed. After that, I deleted variables that are not used anywhere in the code base. Next, I searched for css color names that are used as values (e.g. white, black, etc.) and replaced them with a variable. Once all unnecessary variables and values that weren't a veirable are out of the way, I moved on to consolidating the total color variable list. Once a color has been deicded to be deleted, I'd search fr that color variable and replace it with the coor variable that was decided to take that colors place.</div>
+
+          <div id="lightgallery">
+
+            <a class="project-link-img" href="img/yellow.png" data-sub-html="consolidation of yellow/orange colors">
+              <img class="project-img p-4" src="img/yellow.png" />
+            </a>
+
+            <a class="project-link-img" href="img/green.png" data-sub-html="consolidation of green colors">
+              <img class="project-img p-4" src="img/green.png" />
+            </a>
+
+            <a class="project-link-img" href="img/cyan.png" data-sub-html="consolidation of cyan colors">
+              <img class="project-img p-4" src="img/cyan.png" />
+            </a>
+
+            <a class="project-link-img" href="img/teal.png" data-sub-html="consolidation of teal colors">
+              <img class="project-img p-4" src="img/teal.png" />
+            </a>
+
+            <a class="project-link-img" href="img/blue.png" data-sub-html="consolidation of blue colors">
+              <img class="project-img p-4" src="img/blue.png" />
+            </a>
+
+            <a class="project-link-img" href="img/indigo.png" data-sub-html="consolidation of indigo colors">
+              <img class="project-img p-4" src="img/indigo.png" />
+            </a>
+
+            <a class="project-link-img" href="img/purple.png" data-sub-html="consolidation of purple colors">
+              <img class="project-img p-4" src="img/purple.png" />
+            </a>
+            
+            <a class="project-link-img" href="img/red.png" data-sub-html="consolidation of red colors">
+              <img class="project-img p-4" src="img/red.png" />
+            </a>
+
+            <a class="project-link-img" href="img/grey1.png" data-sub-html="consolidation of light grey colors">
+              <img class="project-img p-4" src="img/grey1.png" />
+            </a>
+
+            <a class="project-link-img" href="img/grey2.png" data-sub-html="consolidation of dark grey colors">
+              <img class="project-img p-4" src="img/grey2.png" />
+            </a>
+
+            <a class="project-link-img" href="img/slate.png" data-sub-html="consolidation of slate colors">
+              <img class="project-img p-4" src="img/slate.png" />
+            </a>
+
+            <a class="project-link-img" href="img/final_colors.png" data-sub-html="final color list; from 128 to 26 colors">
+              <img class="project-img p-4" src="img/final_colors.png" />
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- <div class="resume-item mb-5">
+          <div class="project-content">
+            <h3 id="SMDS" class="pt-4 mb-2"><a href="#SMDS">SurveyMonkey Design System</a></h3>
+          </div>
+          <div class="mb-3 task"><span class="black-text font-weight-bold">Task:</span> Update the colors in our product with our new color palette.</div>
+          <div class="mb-3 problem"><span class="black-text font-weight-bold">Problem:</span> Colors in our codebase are outdated, incoherent, and inconsistently defined.</div>
+          <div class="mb-3 solution"><span class="black-text font-weight-bold">Solution:</span> Consolidate and organize the current colors to allow changing of the values for the new colors.</div>
+          <div>Situation: There's multiple files of color variables. Some values of those variables are identical. Same are almost identical in saturation and hue. Some color variables are not used at all.</div>
+        </div>
+
+
+        <div class="resume-item mb-5">
+          <div class="project-content">
+            <h3 id="SMrebrand" class="pt-4 mb-3"><a href="#SMrebrand">SurveyMonkey Product Rebranding</a></h3>
+          </div>
+          <div class="mb-3 task"><span class="black-text font-weight-bold">Task:</span> Update the colors in our product with our new color palette.</div>
+          <div class="mb-3 problem"><span class="black-text font-weight-bold">Problem:</span> Colors in our codebase are outdated, incoherent, and inconsistently defined.</div>
+          <div class="mb-3 solution"><span class="black-text font-weight-bold">Solution:</span> Consolidate and organize the current colors to allow changing of the values for the new colors.</div>
+          <div>Situation: There's multiple files of color variables. Some values of those variables are identical. Same are almost identical in saturation and hue. Some color variables are not used at all.</div>
+        </div>
+      </div> -->
+    </section>
+
+
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
       <div class="w-100">
         <h2 class="mb-5 underline inline-block">Education</h2>
@@ -172,21 +281,20 @@
       </div>
     </section>
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="projects">
-      <div class="w-100">
-        <h2 class="mb-5 underline inline-block">Projects</h2>
-        <p>I'm working on this section as af November 25, 2019.</p>
-      </div>
-    </section>
-
   </div>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- lightgallery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+  <script src="vendor/lightgallery/lightgallery.min.js"></script>
+
+  <!-- lightgallery plugins -->
+  <script src="vendor/lg-thumbnail/lg-thumbnail.min.js"></script>
+  <script src="vendor/lg-fullscreen/lg-fullscreen.min.js"></script>
 
   <!-- Custom scripts for this template -->
   <script src="js/resume.min.js"></script>

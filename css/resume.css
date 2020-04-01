@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - portfolio v1.0.0 ()
- * Copyright 2013-2019 Matthew Muiter
+ * Copyright 2013-2020 Matthew Muiter
  * Licensed under MIT (https://github.com/BlackrockDigital/portfolio/blob/master/LICENSE)
  */
 
@@ -62,6 +62,14 @@ p.lead {
   font-size: 1.15rem;
 }
 
+.black-text {
+  color: #212529;
+}
+
+.fun-link {
+  color: #BD5D38;
+}
+
 .social-icons a {
   display: inline-block;
   height: 3.5rem;
@@ -90,6 +98,15 @@ p.lead {
 
 .dev-icons .list-inline-item i:hover {
   color: #696969;
+}
+
+.project-img {
+  width: 300px;
+  height: 150px;
+}
+
+.resume-item > .task, .problem, .solution {
+  text-indent: 1em;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -149,7 +166,7 @@ section.resume-section {
   max-width: 75rem;
 }
 
-section.resume-section .resume-item .resume-date {
+section.resume-section .resume-date {
   min-width: none;
 }
 
@@ -178,9 +195,9 @@ section.resume-section .resume-item .resume-date {
 }
 
 a {
-  color: #BD5D38;
+  color: #696969;
 }
 
 a:hover, a:focus, a:active {
-  color: #824027;
+  color: #696969;
 }

@@ -25,4 +25,10 @@
     target: '#sideNav'
   });
 
+  $(document).ready(function() {
+    $("#lightgallery").lightGallery({
+      download: false
+    });
+  });
+
 })(jQuery); // End of use strict

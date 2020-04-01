@@ -67,7 +67,24 @@ function modules() {
       '!./node_modules/jquery/dist/core.js'
     ])
     .pipe(gulp.dest('./vendor/jquery'));
-  return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery, jqueryEasing);
+  var lightgallery = gulp.src([
+    './node_modules/lightgallery/dist/js/lightgallery.min.js',
+    './node_modules/lightgallery/dist/css/lightgallery.css'
+  ])
+    .pipe(gulp.dest('./vendor/lightgallery'));
+  var lightgalleryFonts = gulp.src([
+    './node_modules/lightgallery/dist/fonts/*'
+  ])
+    .pipe(gulp.dest('./vendor/fonts'));
+  var lgThumbnail = gulp.src([
+    './node_modules/lg-thumbnail/dist/lg-thumbnail.min.js'
+  ])
+    .pipe(gulp.dest('./vendor/lg-thumbnail'));
+  var lgFullscreen = gulp.src([
+    'node_modules/lg-fullscreen/dist/lg-fullscreen.min.js'
+  ])
+    .pipe(gulp.dest('./vendor/lg-fullscreen'));
+  return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery, jqueryEasing, lightgallery, lightgalleryFonts, lgThumbnail, lgFullscreen);
 }
 
 // CSS task

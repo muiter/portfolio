@@ -58,6 +58,14 @@ p.lead {
   font-size: 1.15rem;
 }
 
+.black-text {
+  color: $gray-900;
+}
+
+.fun-link {
+  color: $primary;
+}
+
 .social-icons {
   a {
     display: inline-block;
@@ -87,4 +95,14 @@ p.lead {
       color: $gray-800;
     }
   }
+}
+
+.project-img {
+  width: 300px;
+  height: 150px;
+  border: 1px solid $grey-400;
+}
+
+.task span, .problem span, .solution span, .situation span {
+  text-indent: 1em;
 }
