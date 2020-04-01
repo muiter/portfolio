@@ -26,7 +26,11 @@
   });
 
   $(document).ready(function() {
-    $("#lightgallery").lightGallery({
+    $('#lightgallery').lightGallery({
+      download: false,
+      preload: 4
+    });
+    $('#CopperDS').lightGallery({
       download: false
     });
   });

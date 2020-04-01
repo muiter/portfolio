@@ -97,12 +97,33 @@ p.lead {
   }
 }
 
-.project-img {
-  width: 300px;
+.project-link-img {
+  width: 310px;
   height: 150px;
-  border: 1px solid $grey-400;
+  display: inline-block;
+  overflow: hidden;
+  border: 1px solid $gray-300;
+  border-radius: 2px;
+  -webkit-transition : border 500ms ease-out;
+  -moz-transition : border 500ms ease-out;
+  -o-transition : border 500ms ease-out;
+  transition : border 500ms ease-out;
+  &:hover {
+    cursor: pointer;
+    border-color: black;
+  }
 }
 
-.task span, .problem span, .solution span, .situation span {
-  text-indent: 1em;
+.project-img {
+  max-width: 100%;
+}
+
+.project-description {
+  display: block;
+}
+
+.project-header {
+  display: inline-block;
+  border-bottom: 2px solid $black;
+  line-height: 16px;
 }
