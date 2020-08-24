@@ -33,6 +33,9 @@
     $('#CopperDS').lightGallery({
       download: false
     });
+    $('#sm_rebrand').lightGallery({
+      download: false
+    });
   });
 
 })(jQuery); // End of use strict
