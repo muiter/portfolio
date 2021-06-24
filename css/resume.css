@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - portfolio v1.0.0 ()
- * Copyright 2013-2020 Matthew Muiter
+ * Copyright 2013-2021 Matthew Muiter
  * Licensed under MIT (https://github.com/BlackrockDigital/portfolio/blob/master/LICENSE)
  */
 
