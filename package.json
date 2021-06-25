@@ -9,9 +9,7 @@
         "css",
         "sass",
         "html",
-        "responsive",
-        "theme",
-        "template"
+        "responsive"
     ],
     "license": "MIT",
     "author": "Matthew Muiter",
