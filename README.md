@@ -114,18 +114,28 @@ The application includes:
 
 ## 🚀 Deployment
 
-The application can be deployed to any static hosting service:
+### GitHub Pages (Recommended)
+
+This portfolio is configured for automatic deployment to GitHub Pages:
+
+1. **Automatic Deployment**: Push to the `main` branch and GitHub Actions will automatically build and deploy
+2. **Manual Deployment**: Run `./deploy.sh` to build locally, then push the changes
+3. **Site URL**: https://muiter.github.io/portfolio/
+
+### Other Hosting Services
+
+The application can also be deployed to other static hosting services:
 
 1. Build the application: `npm run build`
 2. Upload the `dist/` folder to your hosting service
 
-### Vercel
+#### Vercel
 ```bash
 npm install -g vercel
 vercel
 ```
 
-### Netlify
+#### Netlify
 ```bash
 npm install -g netlify-cli
 netlify deploy
