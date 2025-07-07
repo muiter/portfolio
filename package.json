@@ -1,16 +1,13 @@
 {
-    "title": "portfolio",
     "name": "portfolio",
-    "version": "1.0.0",
+    "version": "2.0.0",
+    "type": "module",
     "scripts": {
-        "start": "node_modules/.bin/gulp watch"
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
     },
-    "keywords": [
-        "css",
-        "sass",
-        "html",
-        "responsive"
-    ],
     "license": "MIT",
     "author": "Matthew Muiter",
     "repository": {
@@ -18,31 +15,27 @@
         "url": "https://github.com/muiter/portfolio"
     },
     "dependencies": {
-        "@fortawesome/fontawesome-free": "5.10.2",
-        "bootstrap": "4.6.0",
-        "jquery": "3.5.0",
-        "jquery.easing": "^1.4.1",
-        "lg-autoplay": "^1.2.1",
-        "lg-fullscreen": "^1.2.1",
-        "lg-hash": "^1.0.4",
-        "lg-pager": "^1.0.2",
-        "lg-share": "^1.2.1",
-        "lg-thumbnail": "^1.2.1",
-        "lg-video": "^1.4.0",
-        "lg-zoom": "^1.3.0",
-        "lightgallery": "^1.10.0"
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-router-dom": "^6.20.1",
+        "framer-motion": "^10.16.16",
+        "lucide-react": "^0.294.0",
+        "react-photo-view": "^1.2.1",
+        "react-icons": "^4.12.0"
     },
     "devDependencies": {
-        "browser-sync": "^2.29.3",
-        "del": "5.1.0",
-        "gulp": "4.0.2",
-        "gulp-autoprefixer": "7.0.0",
-        "gulp-clean-css": "4.2.0",
-        "gulp-header": "2.0.9",
-        "gulp-plumber": "^1.2.1",
-        "gulp-rename": "1.4.0",
-        "gulp-sass": "4.0.2",
-        "gulp-uglify": "3.0.2",
-        "merge-stream": "2.0.0"
+        "@types/react": "^18.2.37",
+        "@types/react-dom": "^18.2.15",
+        "@typescript-eslint/eslint-plugin": "^6.10.0",
+        "@typescript-eslint/parser": "^6.10.0",
+        "@vitejs/plugin-react": "^4.1.1",
+        "autoprefixer": "^10.4.16",
+        "eslint": "^8.53.0",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-react-refresh": "^0.4.4",
+        "postcss": "^8.4.32",
+        "tailwindcss": "^3.3.6",
+        "typescript": "^5.2.2",
+        "vite": "^5.0.0"
     }
 }

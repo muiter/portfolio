@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family:  'Abril Fatface', serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+@layer components {
+  .personal-photo {
+    filter: grayscale(30%);
+  }
+
+  .section-padding {
+    @apply p-3 lg:p-5;
+  }
+  
+  .resume-item {
+    @apply flex flex-col lg:flex-row justify-between mb-8;
+  }
+  
+  .resume-content {
+    @apply flex-1;
+  }
+  
+  .resume-date {
+    @apply text-right text-yale-blue font-semibold;
+  }
+  
+  .project-item {
+    @apply mb-8;
+  }
+  
+  .project-content h3 {
+    @apply text-xl font-bold mb-2 text-yale-blue;
+  }
+  
+  .project-header {
+    @apply font-bold text-gray-900;
+  }
+  
+  .project-description {
+    @apply text-gray-700;
+  }
+  
+  .project-img {
+    @apply max-w-xs rounded-lg shadow-md cursor-pointer transition-transform hover:scale-105;
+  }
+  
+  .social-icons {
+    @apply flex space-x-4;
+  }
+  
+  .social-icons a {
+    @apply text-gray-600 hover:text-yale-blue transition-colors;
+  }
+} 
