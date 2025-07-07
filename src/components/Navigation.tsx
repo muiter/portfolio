@@ -42,7 +42,7 @@ const Navigation = ({ activeSection }: NavigationProps) => {
           <div className="text-center mb-8">
             <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white">
               <img
-                src="/img/muiter.jpeg"
+                src="/portfolio/img/muiter.jpeg"
                 alt="Matthew Muiter"
                 className="w-full h-full object-cover personal-photo"
               />

@@ -27,8 +27,8 @@ const Projects = () => {
       problem: "What do we add or leave out? To what degree should we allow control in a components structure?",
       solution: "We took a hybrid approach to development. After going through our developemnt cycle of creating a componet, we would then work with engineers to swap out old code for our newly built componets. We would also create merge requests so we knew what we could improve from making the components.",
       images: [
-        { src: "/img/alloy_site.png", alt: "Alloy documentation site", subHtml: "Alloy documentation site" },
-        { src: "/img/alloy_button_states.png", alt: "Sketch of all button states", subHtml: "Sketch of all button states" }
+        { src: "/portfolio/img/alloy_site.png", alt: "Alloy documentation site", subHtml: "Alloy documentation site" },
+        { src: "/portfolio/img/alloy_button_states.png", alt: "Sketch of all button states", subHtml: "Sketch of all button states" }
       ]
     },
     {
@@ -39,22 +39,22 @@ const Projects = () => {
       solution: "Consolidate and organize the current color variables. Once organized, create color variables for components to easily change the color giving our product a refreshed UI.",
       context: "There's multiple files of different color variables. Some values of those variables are identical. Some are almost identical in saturation and hue. Some color variables are not used at all. Consolidating all variables into one color file was first one the list. After that, I deleted variables that are not used anywhere in the code base. Next, I searched for css color names that are used as values (e.g. white, black, etc.) and replaced them with a variable. Now that the easy part is out of the way, I moved on to consolidating the total color variable list. We rounded up similar colors in a sketch file (see image below) and decided which colors can be deleted for the \"true\" color of that hue. Afterwards I took the list of colors to be deleted and searched for that color variable to replace it with the \"true\" color variable that would take its place. By this time, the new product colors have been added to our design system npm package and they can be imported into our main codebase. Once imported, I created color variables for the list of components we decided to change the color of in our product. I can now easily swap out the old for new color variables and our product has a new look and feel (see images below).",
       images: [
-        { src: "/img/yellow.png", alt: "consolidation of yellow/orange colors", subHtml: "consolidation of yellow/orange colors" },
-        { src: "/img/green.png", alt: "consolidation of green colors", subHtml: "consolidation of green colors" },
-        { src: "/img/cyan.png", alt: "consolidation of cyan colors", subHtml: "consolidation of cyan colors" },
-        { src: "/img/teal.png", alt: "consolidation of teal colors", subHtml: "consolidation of teal colors" },
-        { src: "/img/blue.png", alt: "consolidation of blue colors", subHtml: "consolidation of blue colors" },
-        { src: "/img/indigo.png", alt: "consolidation of indigo colors", subHtml: "consolidation of indigo colors" },
-        { src: "/img/purple.png", alt: "consolidation of purple colors", subHtml: "consolidation of purple colors" },
-        { src: "/img/red.png", alt: "consolidation of red colors", subHtml: "consolidation of red colors" },
-        { src: "/img/grey1.png", alt: "consolidation of light grey colors", subHtml: "consolidation of light grey colors" },
-        { src: "/img/grey2.png", alt: "consolidation of dark grey colors", subHtml: "consolidation of dark grey colors" },
-        { src: "/img/slate.png", alt: "consolidation of slate colors", subHtml: "consolidation of slate colors" },
-        { src: "/img/DS_colors.png", alt: "new product color palette; held in the design system", subHtml: "new product color palette; held in the design system" },
-        { src: "/img/PW_leads.png", alt: "old UI People page", subHtml: "old UI People page" },
-        { src: "/img/Copper_people.png", alt: "new UI People page", subHtml: "new UI People page" },
-        { src: "/img/PW_pref.png", alt: "old UI Preferences page", subHtml: "old UI Preferences page" },
-        { src: "/img/Copper_pref.png", alt: "new UI Preferences page", subHtml: "new UI Preferences page" }
+        { src: "/portfolio/img/yellow.png", alt: "consolidation of yellow/orange colors", subHtml: "consolidation of yellow/orange colors" },
+        { src: "/portfolio/img/green.png", alt: "consolidation of green colors", subHtml: "consolidation of green colors" },
+        { src: "/portfolio/img/cyan.png", alt: "consolidation of cyan colors", subHtml: "consolidation of cyan colors" },
+        { src: "/portfolio/img/teal.png", alt: "consolidation of teal colors", subHtml: "consolidation of teal colors" },
+        { src: "/portfolio/img/blue.png", alt: "consolidation of blue colors", subHtml: "consolidation of blue colors" },
+        { src: "/portfolio/img/indigo.png", alt: "consolidation of indigo colors", subHtml: "consolidation of indigo colors" },
+        { src: "/portfolio/img/purple.png", alt: "consolidation of purple colors", subHtml: "consolidation of purple colors" },
+        { src: "/portfolio/img/red.png", alt: "consolidation of red colors", subHtml: "consolidation of red colors" },
+        { src: "/portfolio/img/grey1.png", alt: "consolidation of light grey colors", subHtml: "consolidation of light grey colors" },
+        { src: "/portfolio/img/grey2.png", alt: "consolidation of dark grey colors", subHtml: "consolidation of dark grey colors" },
+        { src: "/portfolio/img/slate.png", alt: "consolidation of slate colors", subHtml: "consolidation of slate colors" },
+        { src: "/portfolio/img/DS_colors.png", alt: "new product color palette; held in the design system", subHtml: "new product color palette; held in the design system" },
+        { src: "/portfolio/img/PW_leads.png", alt: "old UI People page", subHtml: "old UI People page" },
+        { src: "/portfolio/img/Copper_people.png", alt: "new UI People page", subHtml: "new UI People page" },
+        { src: "/portfolio/img/PW_pref.png", alt: "old UI Preferences page", subHtml: "old UI Preferences page" },
+        { src: "/portfolio/img/Copper_pref.png", alt: "new UI Preferences page", subHtml: "new UI Preferences page" }
       ]
     },
     {
@@ -74,12 +74,12 @@ const Projects = () => {
       solution: "We created a temporary soltuion that would partially be ported over into the new React based component library.",
       context: "Our team had multiple libraries to update. These consisted of header and footer, which is on every page but may show different content based on logged in, logged out, user privileges, etc. Component library which consisted of reusable compoents such as buttons, modals, radio buttons, inputs, etc.",
       images: [
-        { src: "/img/sm_login_old.png", alt: "old login", subHtml: "old login" },
-        { src: "/img/sm_login_new.png", alt: "rebranded login", subHtml: "rebranded login" },
-        { src: "/img/sm_my_surveys_old.png", alt: "old my surveys page", subHtml: "old my surveys page" },
-        { src: "/img/sm_my_surveys_new.png", alt: "rebranded my surveys page", subHtml: "rebranded my surveys page" },
-        { src: "/img/sm_collect_old.png", alt: "old collect page", subHtml: "old collect page" },
-        { src: "/img/sm_collect_new.png", alt: "rebranded collect page", subHtml: "rebranded collect page" }
+        { src: "/portfolio/img/sm_login_old.png", alt: "old login", subHtml: "old login" },
+        { src: "/portfolio/img/sm_login_new.png", alt: "rebranded login", subHtml: "rebranded login" },
+        { src: "/portfolio/img/sm_my_surveys_old.png", alt: "old my surveys page", subHtml: "old my surveys page" },
+        { src: "/portfolio/img/sm_my_surveys_new.png", alt: "rebranded my surveys page", subHtml: "rebranded my surveys page" },
+        { src: "/portfolio/img/sm_collect_old.png", alt: "old collect page", subHtml: "old collect page" },
+        { src: "/portfolio/img/sm_collect_new.png", alt: "rebranded collect page", subHtml: "rebranded collect page" }
       ]
     }
   ]

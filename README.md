@@ -93,7 +93,7 @@ Update the content in the respective component files:
 - `src/components/Education.tsx` - Educational background
 
 ### Images
-Add your project images to the `public/img/` directory and update the image paths in the Projects component.
+Add your project images to the `public/portfolio/img/` directory and update the image paths in the Projects component.
 
 ## 📱 Responsive Design
 
