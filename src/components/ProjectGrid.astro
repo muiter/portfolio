@@ -1,0 +1,57 @@
+---
+import { Image } from 'astro:assets'
+import { projects } from '../data/projects'
+import { image, isVideo } from '../lib/images'
+import { projectColor } from '../lib/projectColors'
+import { projectUrl } from '../lib/urls'
+
+const circles = await Promise.all(
+  projects.map(async (project) => {
+    const cover = project.cover ?? project.images.find((item) => !isVideo(item.src))?.src
+    return {
+      project,
+      cover: cover ? await image(project.slug, cover) : null,
+    }
+  }),
+)
+---
+
+<!--
+  Circle size: each circle fills half the grid's width, so max-w-[52rem] sets
+  how big they get on wide screens (52rem = 832px, about 390px per circle).
+  Raise it for bigger circles, lower it for smaller ones. mx-auto centers the
+  grid in the section once it's narrower than the page.
+
+  Two circles per row, laid out on four columns with each circle spanning two,
+  so an odd last circle can start in the second column and sit centered.
+-->
+<ul class="mx-auto grid max-w-[52rem] grid-cols-4 gap-5 sm:gap-10 lg:gap-14">
+  {circles.map(({ project, cover }) => (
+    <li class="col-span-2 last:odd:col-start-2">
+      <a
+        href={projectUrl(project.slug)}
+        data-project-circle={project.slug}
+        data-astro-prefetch="viewport"
+        class="group relative isolate flex aspect-square items-end justify-center overflow-hidden rounded-full text-center text-paper shadow-[0_20px_50px_-20px] shadow-ink/40 transition duration-500 ease-out hover:-translate-y-1 hover:shadow-[0_30px_60px_-20px] focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-ink"
+        style={`background-color: ${projectColor}; --circle: ${projectColor}`}
+      >
+        {cover && (
+          <>
+            <Image
+              src={cover}
+              alt=""
+              width={560}
+              densities={[1, 2]}
+              loading="eager"
+              class="absolute inset-0 -z-10 size-full object-cover object-top transition duration-700 ease-out group-hover:scale-105"
+            />
+            <span class="absolute inset-0 -z-10 bg-[linear-gradient(to_top,var(--circle)_15%,color-mix(in_srgb,var(--circle)_55%,transparent)_45%,transparent_75%)]" />
+          </>
+        )}
+        <span class="px-[20%] pb-[16%] font-serif text-base leading-tight text-balance sm:text-2xl lg:text-3xl">
+          {project.title}
+        </span>
+      </a>
+    </li>
+  ))}
+</ul>

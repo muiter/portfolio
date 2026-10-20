@@ -1,0 +1,117 @@
+@import 'tailwindcss';
+
+/* New York: a variable font covering weights 400-1000, with optical sizes
+   the browser picks automatically from the text size. */
+@font-face {
+  font-family: 'Serif';
+  src: url('../assets/fonts/serif.woff2') format('woff2');
+  font-weight: 400 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* SF Pro Text: one file per weight. */
+@font-face {
+  font-family: 'Sans';
+  src: url('../assets/fonts/sans-serif.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sans';
+  src: url('../assets/fonts/sans-serif-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sans';
+  src: url('../assets/fonts/sans-serif-semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* Black and white like the CV; the only color comes from project images. */
+  --color-paper: #ffffff;
+  --color-ink: #0a0a0a;
+  --color-muted: #666666;
+
+  /* Self-hosted New York and SF Pro Text (see @font-face above), falling back
+     to the copies installed on Apple devices, then close system fonts. */
+  --font-sans: 'Sans', -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-serif: 'Serif', ui-serif, 'New York', 'Iowan Old Style', 'Apple Garamond', Georgia, serif;
+}
+
+/* The project transition animates these with a clip-path from JS.
+   Keep both snapshots still and unblended underneath it. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* When collapsing, the project page shrinks on top of the grid. */
+html[data-astro-transition='back']::view-transition-old(root) {
+  z-index: 1;
+}
+
+/* react-photo-view fits enlarged images to the whole window. Shrink them a
+   little so there's room around each image for the arrows and close button. */
+.PhotoView-Portal .PhotoView__Photo {
+  scale: 0.85;
+}
+
+/* Phones fill the width, so leave enough room on the sides for the arrows. */
+@media (max-width: 640px) {
+  .PhotoView-Portal .PhotoView__Photo {
+    scale: 0.75;
+  }
+}
+
+/* An enlarged image zooms in and out on click (see Gallery.tsx), so show
+   zoom in or zoom out over it, and a hand only while it's being dragged. */
+.PhotoView-Portal .PhotoView__Photo,
+.PhotoView-Portal .PhotoView__Photo:active {
+  cursor: zoom-in;
+}
+html[data-photo-zoomed] .PhotoView-Portal .PhotoView__Photo {
+  cursor: zoom-out;
+}
+html[data-photo-dragging] .PhotoView-Portal .PhotoView__Photo {
+  cursor: grabbing;
+}
+
+/* Clicking the image zooms it (see Gallery.tsx), but the lightbox still hides
+   its controls on a single click. Keep the arrows, counter and close button
+   visible at their usual opacity. */
+.PhotoView-Portal.PhotoView-Slider__clean .PhotoView-Slider__BannerWrap,
+.PhotoView-Portal.PhotoView-Slider__clean .PhotoView-Slider__Overlay {
+  opacity: 1;
+}
+.PhotoView-Portal.PhotoView-Slider__clean .PhotoView-Slider__ArrowLeft,
+.PhotoView-Portal.PhotoView-Slider__clean .PhotoView-Slider__ArrowRight {
+  opacity: 0.75;
+}
+.PhotoView-Portal.PhotoView-Slider__clean .PhotoView-Slider__ArrowLeft:hover,
+.PhotoView-Portal.PhotoView-Slider__clean .PhotoView-Slider__ArrowRight:hover {
+  opacity: 1;
+}
+
+/* Gallery.tsx draws its own lightbox arrows, which stay visible at the first
+   and last item (dimmed) and on touch screens. Hide the lightbox's own. */
+.PhotoView-Portal .PhotoView-Slider__ArrowLeft:not([data-lightbox-arrow]),
+.PhotoView-Portal .PhotoView-Slider__ArrowRight:not([data-lightbox-arrow]) {
+  display: none;
+}
+.PhotoView-Portal [data-lightbox-arrow] {
+  border: 0;
+  background: none;
+  padding: 0;
+}
+.PhotoView-Portal.PhotoView-Portal [data-lightbox-arrow]:disabled {
+  opacity: 0.25;
+  cursor: default;
+}

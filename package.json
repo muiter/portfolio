@@ -3,12 +3,12 @@
     "version": "2.0.0",
     "type": "module",
     "scripts": {
-        "dev": "vite",
-        "build": "tsc && vite build",
-        "preview": "vite preview",
-        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "dev": "astro dev",
+        "build": "astro check && astro build",
+        "preview": "astro preview",
+        "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "deploy": "gh-pages -d docs --nojekyll"
     },
     "license": "MIT",
     "author": "Matthew Muiter",
@@ -18,27 +18,27 @@
         "url": "https://github.com/muiter/portfolio"
     },
     "dependencies": {
-        "framer-motion": "^10.16.16",
-        "lucide-react": "^0.294.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-icons": "^4.12.0",
-        "react-photo-view": "^1.2.1",
-        "react-router-dom": "^6.20.1"
+        "@astrojs/react": "^7.0.1",
+        "astro": "^7.3.8",
+        "motion": "^14.1.1",
+        "react": "^19.3.0",
+        "react-dom": "^19.3.0",
+        "react-photo-view": "^1.2.7"
     },
     "devDependencies": {
-        "@types/react": "^18.2.37",
-        "@types/react-dom": "^18.2.15",
-        "@typescript-eslint/eslint-plugin": "^6.10.0",
-        "@typescript-eslint/parser": "^6.10.0",
-        "@vitejs/plugin-react": "^4.1.1",
-        "autoprefixer": "^10.4.16",
-        "eslint": "^8.53.0",
-        "eslint-plugin-react-hooks": "^4.6.0",
-        "eslint-plugin-react-refresh": "^0.4.4",
-        "postcss": "^8.4.32",
-        "tailwindcss": "^3.3.6",
-        "typescript": "^5.2.2",
-        "vite": "^5.0.0"
+        "@astrojs/check": "^0.9.10",
+        "@eslint/js": "^10.0.1",
+        "@tailwindcss/vite": "^4.3.3",
+        "@types/node": "^24.19.2",
+        "@types/react": "^19.3.0",
+        "@types/react-dom": "^19.3.0",
+        "eslint": "^10.12.0",
+        "eslint-plugin-astro": "^3.2.1",
+        "eslint-plugin-react-hooks": "^7.1.1",
+        "gh-pages": "^6.3.0",
+        "globals": "^17.13.0",
+        "tailwindcss": "^4.3.3",
+        "typescript": "~6.0.3",
+        "typescript-eslint": "^8.71.2"
     }
 }
